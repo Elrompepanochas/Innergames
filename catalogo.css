@@ -1,0 +1,58 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/*estilos para el header*/
+header {
+    width: 100vw;
+    height: 15vh;
+    background-color: #8C001A;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* segundo header*/
+.segundo-header {width: 100vw;
+    height: 7vh;
+    background-color: #5F021F;
+    display: flex;}
+
+header img {
+    width: 130px;
+    height: 110px;
+}
+
+header h1 {
+    font-size: 40pt;
+    font-family: "Pixelify Sans", sans-serif;
+}
+
+#header_cart{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30pt;    
+}
+
+
+.cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80pt;
+    padding: 30pt 0 0 0;
+}
+.card{
+    width: 20vw;
+    height: 40vh;
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+body {
+  background-image: url()}
