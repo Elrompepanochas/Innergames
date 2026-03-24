@@ -64,10 +64,11 @@ footer {
 }
 
 .card{
-    width: 30vb ;
+    width: 100vb ;
     height: 40vh ;
     align-items: center;
-    background-color: rgb(209, 218, 169);
+    background-color: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
     font-family:  "Leckerli One", cursive;
     border: none;
    border-radius: 10px;
@@ -76,7 +77,22 @@ footer {
     align-items: center;
     align-content: center;
     flex-direction: column;
-    padding: 5pt;    
+    padding: 5pt;
+    color: white;    
+}
+.card h1{
+    display: flex;
+    align-content: baseline;
+    align-items: baseline;
+
+}
+.card img{
+    height: 25vh;
+    width: 25vb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 .card p{
     padding: 6pt;
@@ -87,14 +103,7 @@ body{
     background-position: center;
  background-image:url(../Fondo\ rojo\ bien.jpg) ;
 }
-.card img{
-    height: 25vh;
-    width: 25vb;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-}
+
 .btn-agregar{
    width: 100%;
    padding: 10px;
@@ -174,4 +183,14 @@ margin: 1vb;
   border-color: #990000;
   width: 55vb;
 }
-
+.partedebajo{
+    display: flex;
+    background-color: #f0f0f0;
+    font-family:  "Iceberg", sans-serif; 
+    padding-left: 30vh;
+    padding-right: 30vh;
+}
+.partedebajo img{
+    width: 40px;
+    height: 38px;
+}
