@@ -29,18 +29,7 @@ nav img {
     align-items: center;
 }
 
-.contenedores {
-    width: 100vw;
-    height: 65vh;
-    background-color: aquamarine;
-    
-}
 
-#ContePrincipal {
-    display: flex;
-    gap: 30pt;
-    padding: 20pt;
-}
 
 body h1 {
     padding: 30pt 0 0 0;
@@ -107,6 +96,7 @@ body{
  background-image:url(../Fondo\ rojo\ bien.jpg) ;
 }
 
+
 .btn-agregar{
    width: 100%;
    padding: 10px;
@@ -129,7 +119,7 @@ body{
     width: 10vh;
     height: 10vb;
 }
-#carritoh{
+#carritoh important{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -202,4 +192,116 @@ margin: 1vb;
     display: flex;
     align-items: center;
     padding: 20px;
+}
+/* Sección general */
+.seccion {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+    color: white;
+}
+
+/* Título centrado */
+.seccion h2 {
+    text-align: center;
+    font-family: "Iceberg", sans-serif;
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+/* Fila con contenido lado a lado */
+.fila {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    
+}
+
+/* Texto a la izquierda, imagen a la derecha */
+.fila.texto-izq {
+    flex-direction: row;
+}
+
+/* Imagen a la izquierda, texto a la derecha */
+/* invierte el orden */
+
+
+.fila p {
+    flex: 1;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.fila img {
+    
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Para la sección de fotos de personas (varias imágenes juntas) */
+.fotos {
+    display: flex;
+    gap: 0;
+}
+
+.fotos img {
+    
+   
+    border-radius: 4px;
+}
+.fila p{
+    font-size: 15pt;
+}
+.ultimafila p{
+    font-size: 15pt;
+    padding-bottom: 2%;
+}
+.seccion{
+    background-color: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+   border-radius: 10px;
+}
+.modal {
+    display: none; /* oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Cuando está activo */
+.modal.activo {
+    display: flex;
+}
+
+/* La caja del modal */
+.modal-contenido {
+    background-color: #1c1c1c;
+    padding: 30px;
+    border-radius: 10px;
+    width: 500px;
+    max-width: 90%;
+    position: relative;
+    color: #990000;
+}
+
+/* Botón de cerrar (la X) */
+.cerrar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #999;
+}
+
+.cerrar:hover {
+    color: white;
 }

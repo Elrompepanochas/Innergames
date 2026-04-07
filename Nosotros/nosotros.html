@@ -6,68 +6,103 @@
     <title>Nosotros</title>
     <link rel="stylesheet" href="./nosotros.css">
 </head>
+<body> <!-- ✅ body abre aquí, antes de todo -->
+
 <nav>
     <div>
         <a href="../index.html"><img src="../logo.png"></a>
     </div>
-<div id="busqueda">
-    <input type="text" placeholder="Buscar juegos..." id="searchInput"/>
-    <img src="https://images.vexels.com/media/users/3/140723/isolated/preview/158241d2079a635fb0cae49accb56da5-icono-de-lupa.png" alt="">
-</div>
+    <div id="busqueda">
+        <input type="text" placeholder="Buscar juegos..." id="searchInput"/>
+        <img src="https://images.vexels.com/media/users/3/140723/isolated/preview/158241d2079a635fb0cae49accb56da5-icono-de-lupa.png" alt="">
+    </div>
     <div> 
         <div id="carritoh">
-        <a href="../index.html" class="a"><img src="https://cdn-icons-png.flaticon.com/512/9055/9055398.png" alt=""></a>
+            <button onclick="abrirModal()">
+                <img src="https://cdn-icons-png.flaticon.com/512/9055/9055398.png" alt="">
+            </button>
         </div>
     </div>
-        <div> 
+    <div> 
         <div id="carritoh">
-        <img onclick="mostrarCarrito()" id="imgcarrito" src="https://cdn-icons-png.flaticon.com/512/8851/8851776.png" alt="">
+            <img onclick="mostrarCarrito()" id="imgcarrito" src="https://cdn-icons-png.flaticon.com/512/8851/8851776.png" alt="">
         </div>
     </div>
 </nav>
-<body>
-    <div class="card">
-        <h1> Quienes somos?</h1>
-        <div class="contenido">
-        <p> En InnerGames somos una tienda online dedicada a acercar el mundo de los 
-            videojuegos y el software a cada rincón del planeta. Contamos con un amplio 
-            catálogo cuidadosamente seleccionado, una plataforma fácil de usar y atención 
-            directa al cliente para que tu experiencia de compra sea simple, rápida y 
-            confiable.</p>
-            <img src="../Quienessomos.png" alt="">
+
+<!-- ¿Quiénes somos? -->
+<div class="seccion">
+    <h2>¿Quiénes somos?</h2>
+    <div class="fila">
+        <p>En InnerGames somos una tienda online dedicada a 
+            acercar el mundo de los videojuegos y el software a 
+            cada rincón del planeta. Contamos con un amplio 
+            catálogo cuidadosamente seleccionado, una plataforma 
+            fácil de usar y atención directa al cliente para que 
+            tu experiencia de compra sea simple, rápida y confiable.</p>
+        <img src="../Quienessomos.png" alt="Gaming">
+    </div>
+</div>
+
+<!-- Nuestra historia -->
+<div class="seccion">
+    <h2>Nuestra historia</h2>
+    <div class="fila">
+        <div class="fotos">
+            <img src="../Nosotrossomos.png" alt="Miembro 1">
         </div>
+        <p>InnerGames nació de una experiencia propia: de jóvenes,
+             encontrar videojuegos de calidad era complicado y el 
+             acceso a ellos era limitado. Esa frustración se 
+             convirtió en motivación. Con el tiempo y dedicación 
+             transformamos esa idea en un emprendimiento real, 
+             creando la plataforma que nos hubiera gustado tener 
+             cuando éramos jugadores buscando nuestro próximo gran juego.</p>
     </div>
-    <div class="card">
-        <h1> Nuestra historia</h1>
-        <div class="contenido"><img src="../Nosotrossomos.png" alt="">
-        <p>   InnerGames nació de una experiencia propia: de jóvenes, encontrar videojuegos 
-            de calidad era complicado y el acceso a ellos era limitado. Esa frustración se 
-            convirtió en motivación. Con el tiempo y dedicación transformamos esa idea en un 
-            emprendimiento real, creando la plataforma que nos hubiera gustado tener cuando 
-            éramos jugadores buscando nuestro próximo gran juego.</p>
-            
-        </div>
+</div>
+
+<!-- Nuestro objetivo -->
+<div class="seccion">
+    <h2>Nuestro objetivo</h2>
+    <div class="ultimafila">
+        <p>Nuestro objetivo es democratizar el acceso a los 
+            videojuegos y el software a nivel mundial. Queremos 
+            que cualquier persona, sin importar dónde se 
+            encuentre, pueda descubrir, elegir y adquirir 
+            productos digitales de forma sencilla y segura, 
+            siempre con el respaldo de un
+            equipo dispuesto a ayudar en cada paso del proceso.</p>
     </div>
-    <div class="card">
-        <h1> Nuestro objetivo</h1>
-        <p>  Nuestro objetivo es democratizar el acceso a los videojuegos y el software a 
-            nivel mundial. Queremos que cualquier persona, sin importar dónde se encuentre,
-             pueda descubrir, elegir y adquirir productos digitales de forma sencilla y 
-             segura, siempre con el respaldo de un equipo dispuesto a ayudar en cada paso 
-            del proceso.</p>
-    </div>
-</body>
+</div>
+
 <footer>
     <div class="partedebajo">
         <div class="contenido">
-    <h2> ©2026 InnerGames, Inc.</h2>
-</div>
-    <div class="contenido">
-    <a href="https://www.instagram.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1280px-Instagram_logo_2022.svg.png" alt=""></a>
-    <a href="https://discord.com/"><img src="https://static.vecteezy.com/system/resources/thumbnails/018/930/718/small_2x/discord-logo-discord-icon-transparent-free-png.png" alt=""></a>
-    <a href="https://www.facebook.com/?locale=es_LA"><img src="https://img.utdstc.com/icon/1b4/fca/1b4fca156c1b0ecaa72a636dffbb7611e22f4ee93a076306e367733181746752:200" alt=""></a>
-    <a href="https://www.twitch.tv/"><img src="https://avatars.githubusercontent.com/u/1795021?s=280&v=4" alt=""></a>
+            <h2>©2026 InnerGames, Inc.</h2>
+        </div>
+        <div class="contenido">
+            <a href="https://www.instagram.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1280px-Instagram_logo_2022.svg.png" alt=""></a>
+            <a href="https://discord.com/"><img src="https://static.vecteezy.com/system/resources/thumbnails/018/930/718/small_2x/discord-logo-discord-icon-transparent-free-png.png" alt=""></a>
+            <a href="https://www.facebook.com/?locale=es_LA"><img src="https://img.utdstc.com/icon/1b4/fca/1b4fca156c1b0ecaa72a636dffbb7611e22f4ee93a076306e367733181746752:200" alt=""></a>
+            <a href="https://www.twitch.tv/"><img src="https://avatars.githubusercontent.com/u/1795021?s=280&v=4" alt=""></a>
+        </div>
+    </div>
+</footer>
+
+<!-- ✅ Modal aquí, antes de cerrar body -->
+<div id="miModal" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal()">&times;</span>
+        <h2>Iniciar sesión</h2>
+        <input type="text" placeholder="Usuario">
+        <input type="password" placeholder="Contraseña">
+        <button onclick="cerrarModal()">Entrar</button>
     </div>
 </div>
-</footer>
+
+<!-- ✅ JavaScript al final -->
+
+
+</body>
+<script src="./nosotros.js"></script> <!-- ✅ body cierra aquí, al final -->
 </html>
