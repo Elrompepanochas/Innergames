@@ -13,3 +13,8 @@ window.onclick = function(e) {
         cerrarModal();
     }
 }
+function irAPagina(url) {
+    if (url) {
+        window.location.href = url;
+    }
+}

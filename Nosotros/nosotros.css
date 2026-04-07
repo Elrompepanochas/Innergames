@@ -1,5 +1,21 @@
 /*Importacion de letras de google font*/
 @import url('https://fonts.googleapis.com/css2?family=Iceberg&display=swap');
+:root {
+  --rojo:        #cc0000;
+  --rojo-oscuro: #8b0000;
+  --rojo-brillo: #ff3333;
+  --fondo:       #0a0a0a;
+  --fondo-card:  rgba(15, 0, 0, 0.80);
+  --texto:       #f0e6e6;
+  --texto-suave: #999;
+  --acento:      #ff4444;
+  --nav-fondo:   #310101;
+  --header-fondo:#680404;
+  --footer-fondo:#f0e6e6;
+  --fuente-titulo: 'Orbitron', sans-serif;
+  --fuente-cuerpo: 'Rajdhani', sans-serif;
+  --transicion:  0.3s ease;
+}
 * {
     padding: 0;
     margin: 0;
@@ -377,4 +393,133 @@ footer {
   color: var(--texto-suave);
   transition: color var(--transicion), transform var(--transicion);
   display: flex;
+}
+.topbar {
+  background: var(--header-fondo);
+  border-bottom: 2px solid var(--rojo-oscuro);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 1.5rem;
+  gap: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 20px rgba(200, 0, 0, 0.25);
+}
+
+.topbar-actions {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.search-wrap {
+  flex: 1;
+  max-width: 600px;
+  display: flex;
+  border: 1.5px solid var(--rojo-oscuro);
+  border-radius: 4px;
+  overflow: hidden;
+  background: #1c1c1c;
+}
+ 
+.search-wrap input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0.55rem 0.9rem;
+  color: var(--texto);
+  font-family: var(--fuente-cuerpo);
+  font-size: 0.95rem;
+}
+ 
+.search-wrap input::placeholder { color: #555; }
+ 
+.search-wrap select {
+  background: #222;
+  border: none;
+  border-left: 1px solid var(--rojo-oscuro);
+  color: var(--texto);
+  padding: 0 0.7rem;
+  font-family: var(--fuente-cuerpo);
+  cursor: pointer;
+  outline: none;
+  font-size: 0.85rem;
+}
+ 
+.search-btn {
+  background: var(--rojo);
+  border: none;
+  padding: 0 1rem;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1rem;
+  transition: background var(--transicion);
+}
+ 
+.search-btn:hover { background: var(--rojo-brillo); }
+ 
+/* Acciones (cuenta y carrito) */
+.topbar-actions {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+ 
+.btn-account, .btn-cart {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--fuente-cuerpo);
+  font-size: 0.85rem;
+  color: var(--texto);
+  cursor: pointer;
+  background: none;
+  border: none;
+  transition: color var(--transicion);
+}
+ 
+.btn-account:hover, .btn-cart:hover { color: var(--acento); }
+ 
+/* NAV (categorías) */
+nav {
+  background: var(--nav-fondo);
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  padding: 1rem 1rem;
+  border-bottom: 1px solid rgba(180, 0, 0, 0.3);
+}
+ 
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  font-family: var(--fuente-cuerpo);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--texto);
+  cursor: pointer;
+  transition: color var(--transicion), transform var(--transicion);
+}
+ 
+.nav-item svg {
+  filter: drop-shadow(0 0 4px rgba(255, 60, 60, 0.4));
+  transition: transform var(--transicion);
+}
+ 
+.nav-item:hover {
+  color: var(--acento);
+  transform: translateY(-3px);
+}
+ 
+.nav-item:hover svg {
+  transform: scale(1.15);
+}
+nav img {
+    padding-right: 1%;
 }
