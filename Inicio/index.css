@@ -1,0 +1,416 @@
+/* ===========================
+   INNERGAMES — innergames.css
+   =========================== */
+
+/* ---------- Variables globales ---------- */
+:root {
+  --rojo:        #cc0000;
+  --rojo-oscuro: #8b0000;
+  --rojo-brillo: #ff3333;
+  --fondo:       #0a0a0a;
+  --fondo-card:  rgba(15, 0, 0, 0.80);
+  --texto:       #f0e6e6;
+  --texto-suave: #999;
+  --acento:      #ff4444;
+  --nav-fondo:   #1a0000;
+  --header-fondo:#111111;
+  --fuente-titulo: 'Orbitron', sans-serif;
+  --fuente-cuerpo: 'Rajdhani', sans-serif;
+  --transicion:  0.3s ease;
+}
+
+/* ---------- Reset básico ---------- */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--fondo);
+  color: var(--texto);
+  font-family: var(--fuente-cuerpo);
+  font-size: 16px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a { text-decoration: none; color: inherit; }
+img { display: block; }
+
+/* ===========================
+   TOPBAR (barra superior)
+   =========================== */
+.topbar {
+  background: var(--header-fondo);
+  border-bottom: 2px solid var(--rojo-oscuro);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 1.5rem;
+  gap: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 20px rgba(200, 0, 0, 0.25);
+}
+
+/* Logo texto */
+.logo {
+  font-family: var(--fuente-titulo);
+  font-size: 0.85rem;
+  font-weight: 900;
+  color: var(--rojo-brillo);
+  line-height: 1.2;
+  letter-spacing: 0.1em;
+  text-shadow: 0 0 10px rgba(255, 50, 50, 0.5);
+  white-space: nowrap;
+}
+
+/* Buscador */
+.search-wrap {
+  flex: 1;
+  max-width: 600px;
+  display: flex;
+  border: 1.5px solid var(--rojo-oscuro);
+  border-radius: 4px;
+  overflow: hidden;
+  background: #1c1c1c;
+}
+
+.search-wrap input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0.55rem 0.9rem;
+  color: var(--texto);
+  font-family: var(--fuente-cuerpo);
+  font-size: 0.95rem;
+}
+
+.search-wrap input::placeholder { color: #555; }
+
+.search-wrap select {
+  background: #222;
+  border: none;
+  border-left: 1px solid var(--rojo-oscuro);
+  color: var(--texto);
+  padding: 0 0.7rem;
+  font-family: var(--fuente-cuerpo);
+  cursor: pointer;
+  outline: none;
+  font-size: 0.85rem;
+}
+
+.search-btn {
+  background: var(--rojo);
+  border: none;
+  padding: 0 1rem;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1rem;
+  transition: background var(--transicion);
+}
+
+.search-btn:hover { background: var(--rojo-brillo); }
+
+/* Acciones (cuenta y carrito) */
+.topbar-actions {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.btn-account, .btn-cart {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--fuente-cuerpo);
+  font-size: 0.85rem;
+  color: var(--texto);
+  cursor: pointer;
+  background: none;
+  border: none;
+  transition: color var(--transicion);
+}
+
+.btn-account:hover, .btn-cart:hover { color: var(--acento); }
+
+/* ===========================
+   NAV (categorías)
+   =========================== */
+nav {
+  background: var(--nav-fondo);
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid rgba(180, 0, 0, 0.3);
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  font-family: var(--fuente-cuerpo);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--texto);
+  cursor: pointer;
+  transition: color var(--transicion), transform var(--transicion);
+}
+
+.nav-item svg {
+  filter: drop-shadow(0 0 4px rgba(255, 60, 60, 0.4));
+  transition: transform var(--transicion);
+}
+
+.nav-item:hover {
+  color: var(--acento);
+  transform: translateY(-3px);
+}
+
+.nav-item:hover svg {
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 8px rgba(255, 60, 60, 0.8));
+}
+
+/* ===========================
+   MAIN / HERO
+   =========================== */
+main {
+  flex: 1;
+  background: #100005;
+  padding: 2.5rem 1rem 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Cuadrícula roja animada de fondo */
+main::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(180, 0, 0, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(180, 0, 0, 0.07) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: rejilla 8s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes rejilla {
+  from { background-position: 0 0; }
+  to   { background-position: 40px 40px; }
+}
+
+/* Título de sección */
+.section-title {
+  font-family: var(--fuente-titulo);
+  font-size: 1.8rem;
+  font-weight: 900;
+  text-align: center;
+  letter-spacing: 0.15em;
+  color: var(--texto);
+  text-shadow:
+    0 0 10px rgba(255, 0, 0, 0.5),
+    0 0 30px rgba(255, 0, 0, 0.2);
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* ===========================
+   CARRUSEL
+   =========================== */
+.carousel-outer {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Ventana visible del carrusel (oculta lo que sale) */
+.carousel-window {
+  flex: 1;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+/* Pista que se mueve */
+.carousel-track {
+  display: flex;
+  gap: 1.2rem;
+  transition: transform 0.5s ease;
+}
+
+/* Botones prev / next */
+.carousel-btn {
+  background: rgba(180, 0, 0, 0.75);
+  border: 2px solid var(--rojo);
+  color: #fff;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background var(--transicion), transform var(--transicion);
+  z-index: 3;
+}
+
+.carousel-btn:hover {
+  background: var(--rojo-brillo);
+  transform: scale(1.1);
+}
+
+/* Puntos de navegación */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 50, 50, 0.4);
+  cursor: pointer;
+  transition: background var(--transicion), transform var(--transicion);
+}
+
+.dot.active {
+  background: var(--rojo);
+  transform: scale(1.3);
+  box-shadow: 0 0 8px var(--rojo-brillo);
+}
+
+/* ===========================
+   TARJETAS DE JUEGO
+   =========================== */
+.game-card {
+  /* Cada tarjeta ocupa exactamente el 25% del contenedor menos los gaps */
+  flex: 0 0 calc(25% - 0.9rem);
+  min-width: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--fondo-card);
+  border: 1px solid rgba(180, 0, 0, 0.3);
+  cursor: pointer;
+  position: relative;
+  transition: transform var(--transicion), box-shadow var(--transicion), border-color var(--transicion);
+}
+
+.game-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 35px rgba(200, 0, 0, 0.45), 0 0 0 1px var(--rojo);
+  border-color: var(--rojo);
+}
+
+.game-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: filter var(--transicion);
+}
+
+.game-card:hover img {
+  filter: brightness(1.1) saturate(1.2);
+}
+
+/* Info en la parte baja de la tarjeta */
+.card-info {
+  padding: 0.8rem 1rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.card-title {
+  font-family: var(--fuente-cuerpo);
+  font-weight: 700;
+  font-size: 1rem;
+  color: #fff;
+  line-height: 1.2;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.card-price {
+  font-size: 0.85rem;
+  color: var(--acento);
+  margin-top: 0.2rem;
+  letter-spacing: 0.05em;
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+footer {
+  background: var(--header-fondo);
+  border-top: 2px solid var(--rojo-oscuro);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0.9rem 1.5rem;
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icons a {
+  color: var(--texto-suave);
+  transition: color var(--transicion), transform var(--transicion);
+  display: flex;
+}
+
+.social-icons a:hover { transform: scale(1.2); }
+
+/* Colores por red social al hover */
+.social-icons a:nth-child(1):hover { color: #e1306c; } /* Instagram */
+.social-icons a:nth-child(2):hover { color: #9146ff; } /* Twitch     */
+.social-icons a:nth-child(3):hover { color: #1877f2; } /* Facebook   */
+.social-icons a:nth-child(4):hover { color: #7289da; } /* Discord    */
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+@media (max-width: 900px) {
+  .game-card { flex: 0 0 calc(50% - 0.6rem); }
+  nav { gap: 1.5rem; }
+  .search-wrap { max-width: 300px; }
+}
+
+@media (max-width: 600px) {
+  .game-card { flex: 0 0 calc(100% - 0.6rem); }
+  .topbar { flex-wrap: wrap; gap: 0.6rem; }
+  .search-wrap { max-width: 100%; order: 3; flex-basis: 100%; }
+  .section-title { font-size: 1.2rem; }
+  nav { gap: 1rem; flex-wrap: wrap; }
+  .nav-item { font-size: 0.85rem; }
+  .nav-item svg { width: 22px; height: 22px; }
+}
