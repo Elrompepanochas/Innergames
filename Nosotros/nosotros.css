@@ -289,7 +289,12 @@ margin: 1vb;
     width: 500px;
     max-width: 90%;
     position: relative;
-    color: #990000;
+    color: #f8f8f8;
+}
+
+.modal-contenido h2 {
+    font-family: "Iceberg", sans-serif;
+    font-size: 30pt;
 }
 
 /* Botón de cerrar (la X) */
@@ -304,4 +309,72 @@ margin: 1vb;
 
 .cerrar:hover {
     color: white;
+}
+.inputs input{
+  background: #1c1c1c;
+  border: 1px solid rgba(153,0,0,0.35);
+  color: #f0f0f0;
+  font-family: 'Inter', sans-serif;
+  font-size: 2vh;
+  padding: 8px 36px 8px 14px;
+  border-radius: 8px;
+  width: 20vb;
+  transition: border-color .25s, width .35s;
+  outline: none;
+}
+.inputs {
+    padding: 0.4%;
+}
+
+.inputs textarea{
+  background: #1c1c1c;
+  border: 1px solid rgba(153,0,0,0.35);
+  color: #f0f0f0;
+  font-family: 'Inter', sans-serif;
+  font-size: 2vh;
+  padding: 8px 36px 8px 14px;
+  border-radius: 8px;
+  width: 20vb;
+  transition: border-color .25s, width .35s;
+  outline: none;
+}
+
+.inputs input:focus {
+  border-color: #990000;
+  width: 30vb;
+}
+
+.modal-contenido button {
+   width: 100%;
+   padding: 10px;
+   background-color: #990000;
+   color: white;
+   border: none;
+   border-radius: 10px;
+   font-size:  1.5rem;
+   cursor:pointer;
+   transition: background-color 0.25 ease;
+   font-family:  "Iceberg", cursive;
+}
+footer {
+  background: var(--footer-fondo);
+  border-top: 2px solid var(--rojo-oscuro);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0.9rem 1.5rem;
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+}
+ 
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+ 
+.social-icons a {
+  color: var(--texto-suave);
+  transition: color var(--transicion), transform var(--transicion);
+  display: flex;
 }
