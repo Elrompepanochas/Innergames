@@ -190,15 +190,16 @@ margin: 1vb;
     display: flex;
     background-color: #f0f0f0;
     font-family:  "Iceberg", sans-serif; 
-    padding-left: 30vh;
-    padding-right: 30vh;
+    padding-left: 50%;
+    padding-right: 50%;
 }
 .partedebajo img{
+    padding-top: 10px;
     width: 40px;
     height: 38px;
 }
 .contenido{
     display: flex;
     align-items: center;
-    padding: 1vb;
+    padding: 20px;
 }
