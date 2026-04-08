@@ -17,6 +17,7 @@
         <option value="../index.html">Inicio</option>
         <option value="../Catalogo/catalogo.html">Catalogo</option>
     </select>
+
       <button class="search-btn">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
           stroke="currentColor" stroke-width="2.5" width="16" height="16">
@@ -27,7 +28,7 @@
     </div>
         <div class="topbar-actions">
       <div class="btn-account">
-        <button onclick="abrirModal()"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+        <button onclick="irAPagina('./contacto.html')"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
           stroke="currentColor" stroke-width="2" width="18" height="18">
           <circle cx="12" cy="8" r="4"/>
           <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
@@ -126,28 +127,6 @@
 </footer>
 
 
-<div id="miModal" class="modal">
-    <div class="modal-contenido">
-        <span class="cerrar" onclick="cerrarModal()">&times;</span>
-    <form id="demoForm">
-        <h2>Contactece con nosotros!</h2>
-      <div class="inputs">
-        <input type="text" id="Nombre" placeholder="Nombre">
-      </div>
-      <div class="inputs">
-        <input type="text" id="Contrasena" placeholder="Contaseña">
-      </div>
-      <div class="inputs">
-        <em id="Mensaje" placeholder="Ingrese su mensaje"></em>
-      </div>
-    </form>
-        <button onclick="submit()">Enviar</button>
-      <div class="inputs">
-        <em> Datos protegidos saldra aqui...</em>
-      </div>
-    </div>
-    </div>
-</div>
+<script src="./nosotros.js"></script>
 </body>
-<script src="./nosotros.js"></script> <!-- ✅ body cierra aquí, al final -->
 </html>

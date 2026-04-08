@@ -13,6 +13,7 @@ window.onclick = function(e) {
         cerrarModal();
     }
 }
+
 function irAPagina(url) {
     if (url) {
         window.location.href = url;
@@ -49,7 +50,7 @@ const base64ToArrayBuffer = (base64) => {
  * 1. HASH (Unidireccional)
  * Ideal para contraseñas antes de enviarlas o compararlas.
  */
-export const hashPassword = async (password) => {
+const hashPassword = async (password) => {
     const encoder = new TextEncoder();
     const data = encoder.encode(password);
     const hashBuffer = await crypto.subtle.digest('SHA-256', data);
@@ -91,7 +92,7 @@ const getKeyFromPassword = async (password, salt) => {
  * @param {string} masterPassword - La contraseña maestra
  * @returns {Promise<string>} - Objeto en Base64 que contiene: iv.ciphertext
  */
-export const encryptData = async (plainText, masterPassword) => {
+const encryptData = async (plainText, masterPassword) => {
     try {
         const encoder = new TextEncoder();
         const iv = crypto.getRandomValues(new Uint8Array(12));
@@ -127,7 +128,7 @@ export const encryptData = async (plainText, masterPassword) => {
  * @param {string} masterPassword - La misma contraseña maestra usada para encriptar
  * @returns {Promise<string>} - El texto original
  */
-export const decryptData = async (encryptedPackage, masterPassword) => {
+const decryptData = async (encryptedPackage, masterPassword) => {
     try {
         const [saltBase64, ivBase64, ciphertextBase64] = encryptedPackage.split('.');
         
