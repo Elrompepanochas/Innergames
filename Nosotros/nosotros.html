@@ -129,23 +129,22 @@
 <div id="miModal" class="modal">
     <div class="modal-contenido">
         <span class="cerrar" onclick="cerrarModal()">&times;</span>
+    <form id="demoForm">
         <h2>Contactece con nosotros!</h2>
-        <div class="inputs">
-        <input type="text" placeholder="Nombre">
-    </div>
-        <div class="inputs">
-        <input type="email" placeholder="Email">
-    </div>
-    <div class="inputs">
-        <div class="inputs">
-        </div>
-        <div class="inputs">
-        <input type="text" placeholder="Asunto">
-    </div>
-    <div class="inputs">
-        <textarea placeholder="Ingrese su mensaje"></textarea>
-    </div>
-        <button onclick="cerrarModal()">Enviar</button>
+      <div class="inputs">
+        <input type="text" id="Nombre" placeholder="Nombre">
+      </div>
+      <div class="inputs">
+        <input type="text" id="Contrasena" placeholder="Contaseña">
+      </div>
+      <div class="inputs">
+        <em id="Mensaje" placeholder="Ingrese su mensaje"></em>
+      </div>
+    </form>
+        <button onclick="submit()">Enviar</button>
+      <div class="inputs">
+        <em> Datos protegidos saldra aqui...</em>
+      </div>
     </div>
     </div>
 </div>
