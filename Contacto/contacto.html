@@ -1,23 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nosotros</title>
-    <link rel="stylesheet" href="./nosotros.css">
+    <title>Contacto - InnerGames</title>
+    <link rel="stylesheet" href="./contacto.css">
     <link rel="icon" href="../Imagenes-Innergames/logo.png" type="image/png">
 </head>
-<body> 
-<nav>
-    <img src="../Imagenes-Innergames/logo.png" alt="">
-        <div class="search-wrap">
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="topbar">
+    <div class="logo"><img src="../Imagenes-Innergames/logo.png" alt="InnerGames" /></div>
+
+    <div class="search-wrap">
       <input type="text" placeholder="¿Qué estás buscando?" />
       <select onchange="irAPagina(this.value)">
         <option value="./nosotros.html">Nosotros</option>
         <option value="../index.html">Inicio</option>
         <option value="../Catalogo/catalogo.html">Catalogo</option>
-    </select>
-
+      </select>
       <button class="search-btn">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
           stroke="currentColor" stroke-width="2.5" width="16" height="16">
@@ -26,15 +29,17 @@
         </svg>
       </button>
     </div>
-        <div class="topbar-actions">
+
+    <div class="topbar-actions">
       <div class="btn-account">
-        <button onclick="irAPagina('../Contacto/contacto.html')"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" width="18" height="18">
-          <circle cx="12" cy="8" r="4"/>
-          <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
-        </svg>
-        Contacto
-    </button>
+        <button id="btncontacto" onclick="irAPagina('../Nosotros/contacto.html')">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" width="18" height="18">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+          </svg>
+          Contacto
+        </button>
       </div>
       <button class="btn-cart">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
@@ -46,53 +51,31 @@
         Carrito
       </button>
     </div>
-</nav>
+  </div>
+</header>
 
-<!-- ¿Quiénes somos? -->
-<div class="seccion">
-    <h2>¿Quiénes somos?</h2>
-    <div class="fila">
-        <p>En InnerGames somos una tienda online dedicada a 
-            acercar el mundo de los videojuegos y el software a 
-            cada rincón del planeta. Contamos con un amplio 
-            catálogo cuidadosamente seleccionado, una plataforma 
-            fácil de usar y atención directa al cliente para que 
-            tu experiencia de compra sea simple, rápida y confiable.</p>
-        <img src="../Imagenes-Innergames/Quienessomos.png" alt="Gaming">
+<!-- ===== MAIN ===== -->
+<main>
+  <form id="demoForm">
+    <h2>Contáctese con nosotros!</h2>
+    <div class="inputs">
+      <input type="text" id="Nombre" placeholder="Nombre">
     </div>
-</div>
-
-<!-- Nuestra historia -->
-<div class="seccion">
-    <h2>Nuestra historia</h2>
-    <div class="fila">
-        <div class="fotos">
-            <img src="../Imagenes-Innergames/Nosotrossomos.png" alt="Miembro 1">
-        </div>
-        <p>InnerGames nació de una experiencia propia: de jóvenes,
-             encontrar videojuegos de calidad era complicado y el 
-             acceso a ellos era limitado. Esa frustración se 
-             convirtió en motivación. Con el tiempo y dedicación 
-             transformamos esa idea en un emprendimiento real, 
-             creando la plataforma que nos hubiera gustado tener 
-             cuando éramos jugadores buscando nuestro próximo gran juego.</p>
+    <div class="inputs">
+      <input type="text" id="Contrasena" placeholder="Contraseña">
     </div>
-</div>
-
-<!-- Nuestro objetivo -->
-<div class="seccion">
-    <h2>Nuestro objetivo</h2>
-    <div class="ultimafila">
-        <p>Nuestro objetivo es democratizar el acceso a los 
-            videojuegos y el software a nivel mundial. Queremos 
-            que cualquier persona, sin importar dónde se 
-            encuentre, pueda descubrir, elegir y adquirir 
-            productos digitales de forma sencilla y segura, 
-            siempre con el respaldo de un
-            equipo dispuesto a ayudar en cada paso del proceso.</p>
+    <div class="inputs">
+      <textarea id="Mensaje" placeholder="Ingrese su mensaje"></textarea>
     </div>
-</div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
 
+  <div id="formResult" class="result-box">
+    <em>Datos protegidos saldrán aquí...</em>
+  </div>
+</main>
+
+<!-- ===== FOOTER ===== -->
 <footer>
   <span class="footer-copy">copyright: innergames</span>
   <div class="social-icons">
@@ -108,7 +91,6 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
         stroke="currentColor" stroke-width="2" width="20" height="20">
         <path d="M21 2H3v16h5v4l4-4h5l4-4V2zM11 11V7m5 4V7"/>
-        <img src="" alt="">
       </svg>
     </a>
     <a href="#" title="Facebook">
@@ -126,7 +108,6 @@
   </div>
 </footer>
 
-
-<script src="./nosotros.js"></script>
+<script type="module" src="./contacto.js"></script>
 </body>
 </html>

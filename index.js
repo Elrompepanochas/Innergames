@@ -1,5 +1,5 @@
  
-const track = document.getElementById('track');
+ const track = document.getElementById('track');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 const dotsDiv = document.getElementById('dots');
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
  
 // ----- Inicio -----
 irA(0);
-
+ 
 function irAPagina(url) {
     if (url) {
         window.location.href = url;

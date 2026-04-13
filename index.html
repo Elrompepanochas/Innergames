@@ -5,23 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>InnerGames</title>
   <link rel="stylesheet" href="index.css" />
-  <link rel="icon" href="../logo.png" type="image/png">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="../Imagenes-Innergames/logo.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@400;600;700&display=swap%22 rel="stylesheet" />
 </head>
 <body>
-
+ 
 <!-- ===== HEADER ===== -->
 <header>
-<a href="../Nosotros/nosotros.html"></a>
-  <!-- Barra superior -->
   <div class="topbar">
-
-    <div class="logo">Inner<br>Games</div>
-
+    <div class="logo"><img src="../Imagenes-Innergames/logo.png" alt="InnerGames" /></div>
+ 
     <div class="search-wrap">
       <input type="text" placeholder="¿Qué estás buscando?" />
       <select onchange="irAPagina(this.value)">
-        <option value="../index.html">Inicio</option>
+        <option value="./index.html">Inicio</option>
         <option value="../Nosotros/nosotros.html">Nosotros</option>
         <option value="../Catalogo/catalogo.html">Catalogo</option>
     </select>
@@ -33,15 +30,16 @@
         </svg>
       </button>
     </div>
-
     <div class="topbar-actions">
       <div class="btn-account">
+        <button id="btncontacto" onclick="irAPagina('../Contacto/contacto.html')">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
           stroke="currentColor" stroke-width="2" width="18" height="18">
           <circle cx="12" cy="8" r="4"/>
           <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
         </svg>
-        Accede / Regístrate
+        Contacto
+      </button>
       </div>
       <button class="btn-cart">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
@@ -53,12 +51,10 @@
         Carrito
       </button>
     </div>
-
   </div>
-
+ 
   <!-- Menú de navegación -->
   <nav>
-
     <div class="nav-item">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
         stroke="currentColor" stroke-width="2" width="28" height="28">
@@ -93,22 +89,19 @@
       Contáctanos
     </div>
   </nav>
-
+ 
 </header>
-
+ 
 <!-- ===== MAIN ===== -->
 <main>
   <h2 class="section-title">Juegos Más Vendidos</h2>
-
+ 
   <div class="carousel-outer">
-
-    <!-- Botón izquierda -->
     <button class="carousel-btn" id="prevBtn" aria-label="Anterior">&#8249;</button>
-
-    <!-- Carrusel -->
+ 
     <div class="carousel-window">
       <div class="carousel-track" id="track">
-
+ 
         <div class="game-card">
           <img src="https://image.api.playstation.com/vulcan/img/rnd/202010/1614/EqaXrhlUY3vujvEJEBw7d1h0.png" alt="Sackboy" />
           <div class="card-info">
@@ -116,31 +109,31 @@
             <div class="card-price">₡14.900</div>
           </div>
         </div>
-
+ 
         <div class="game-card">
-          <img src="https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_1240/b_white/f_auto/q_auto/store/software/switch/70010000000025/7137262b5a64d921e193653f8aa0b722925abc5680380ca0e18a5cfd91697f58" alt="Zelda" />
+          <img src="https://www.nintendo.com/es-mx/store/products/the-legend-of-zelda-breath-of-the-wild-switch/?srsltid=AfmBOorH-vmLNWQEdl9I8RSRogLoiIemIGSh5sZ5WkTaDSutce_H4e0qalt"="Zelda" />
           <div class="card-info">
             <div class="card-title">ZELDA Breath of The Wild</div>
             <div class="card-price">₡18.500</div>
           </div>
         </div>
-
+ 
         <div class="game-card">
-          <img src= "https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_1240/b_white/f_auto/q_auto/store/software/switch2/70010000096829/0a06bf277f1eb585fcbb7ddeb4f70014fd1c860d326eb33c8accf4d4827ade72" />
+          <img src="https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_1240/b_white/f_auto/q_auto/store/software/switch/70010000000025/7137262b5a64d921e193653f8aa0b722925abc5680380ca0e18a5cfd91697f58%22 alt="Kirby" />
           <div class="card-info">
             <div class="card-title">Kirby Forgotten Land</div>
             <div class="card-price">₡16.200</div>
           </div>
         </div>
-
+ 
         <div class="game-card">
-          <img src="https://gaming-cdn.com/images/news/articles/14631/cover/resident-evil-requiem-tambien-podria-salir-para-ps4-y-switch-2-cover68b7f5a702ca8.jpg" alt="Resident Evil" />
+          <img src="https://gaming-cdn.com/images/news/articles/14631/cover/resident-evil-requiem-tambien-podria-salir-para-ps4-y-switch-2-cover68b7f5a702ca8.jpg%22 alt="Resident Evil" />
           <div class="card-info">
             <div class="card-title">Resident Evil Requiem</div>
             <div class="card-price">₡22.900</div>
           </div>
         </div>
-
+ 
         <div class="game-card">
           <img src="https://upload.wikimedia.org/wikipedia/en/e/ee/God_of_War_Ragnar%C3%B6k_cover.jpg" alt="God of War" />
           <div class="card-info">
@@ -148,7 +141,7 @@
             <div class="card-price">₡24.500</div>
           </div>
         </div>
-
+ 
         <div class="game-card">
           <img src="https://image.api.playstation.com/vulcan/ap/rnd/202110/2000/YMUoJUYNX0xWk6eTKuZLr5Iw.jpg" alt="Elden Ring" />
           <div class="card-info">
@@ -156,36 +149,256 @@
             <div class="card-price">₡19.900</div>
           </div>
         </div>
-
+ 
         <div class="game-card">
-          <img src="https://press.cdprojektred.com/_next/image?url=https%3A%2F%2Fpress.cdn.cdpr.app%2Fnews%2F6fdf182c4be4a018da07e1703f3a21aefb6d5833525d8ec1.png&w=1920&q=75" alt="Cyberpunk 2077" />
+          <img src="https://press.cdprojektred.com/_next/image?url=https%3A%2F%2Fpress.cdn.cdpr.app%2Fnews%2F6fdf182c4be4a018da07e1703f3a21aefb6d5833525d8ec1.png&w=1920&q=75%22 alt="Cyberpunk 2077" />
           <div class="card-info">
             <div class="card-title">Cyberpunk 2077</div>
             <div class="card-price">₡15.500</div>
           </div>
         </div>
-
+ 
         <div class="game-card">
           <img src="https://www.hogwartslegacy.com/images/share.jpg" alt="Hogwarts Legacy" />
           <div class="card-info">
             <div class="card-title">Hogwarts Legacy</div>
-            <div class="card-price">₡21.000</div>
+            <div class="card-price">₡32.000</div>
           </div>
         </div>
-
+ 
       </div>
     </div>
-
-    <!-- Botón derecha -->
+ 
     <button class="carousel-btn" id="nextBtn" aria-label="Siguiente">&#8250;</button>
-
   </div>
-
-  <!-- Puntos del carrusel -->
+ 
   <div class="carousel-dots" id="dots"></div>
-
+ 
+  <!-- ===== SECCIÓN TIENDA ===== -->
+  <section class="tienda">
+    <h2 class="section-title">Ofertas Destacadas</h2>
+ 
+    <div class="tienda-grid">
+ 
+      <!-- Card 1 -->
+      <div class="tienda-card">
+        <div class="tienda-badge">OFERTAS DE 13 VENDEDORES</div>
+        <div class="tienda-img-wrap">
+          <img src="https://media.vandal.net/m/2-2023/202322815345271_1.jpg" alt="Sons of the Forest" />
+        </div>
+        <div class="tienda-info">
+          <div class="tienda-nombre">Sons Of The Forest PC</div>
+          <div class="tienda-plataforma">
+            <span class="plataforma-tag">Steam · Cuenta · GLOBAL</span>
+          </div>
+          <div class="tienda-precios">
+            <span class="precio-actual">4.07 EUR</span>
+            <span class="precio-original">28.99 EUR</span>
+            <span class="descuento">-86%</span>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- Card 2 -->
+      <div class="tienda-card">
+        <div class="tienda-badge">OFERTAS DE 16 VENDEDORES</div>
+        <div class="tienda-img-wrap">
+          <img src="https://xboxwire.thesourcemediaassets.com/sites/2/pd_ksp_enhancededition_art_1920x1080.jpg" alt="Kerbal Space Program" />
+        </div>
+        <div class="tienda-info">
+          <div class="tienda-nombre">Kerbal Space Program PC</div>
+          <div class="tienda-plataforma">
+            <span class="plataforma-tag">Steam · Clave · GLOBAL</span>
+          </div>
+          <div class="tienda-precios">
+            <span class="precio-actual">17.74 EUR</span>
+            <span class="precio-original">39.99 EUR</span>
+            <span class="descuento">-56%</span>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- Card 3 -->
+      <div class="tienda-card">
+        <div class="tienda-badge">OFERTAS DE 7 VENDEDORES</div>
+        <div class="tienda-img-wrap">
+          <img src="https://gaming-cdn.com/images/products/15557/orig/gray-zone-warfare-pc-game-steam-europe-cover.jpg?v=1729001469%22 alt="Gray Zone Warfare" />
+        </div>
+        <div class="tienda-info">
+          <div class="tienda-nombre">Gray Zone Warfare PC</div>
+          <div class="tienda-plataforma">
+            <span class="plataforma-tag">Steam · Cuenta · GLOBAL</span>
+          </div>
+          <div class="tienda-precios">
+            <span class="precio-actual">17.76 EUR</span>
+            <span class="precio-original">39.99 EUR</span>
+            <span class="descuento">-56%</span>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- Card 4 -->
+      <div class="tienda-card">
+        <div class="tienda-badge">OFERTAS DE 4 VENDEDORES</div>
+        <div class="tienda-img-wrap">
+          <img src="data:image/png;base64,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" alt="Spotify Premium" />
+        </div>
+        <div class="tienda-info">
+          <div class="tienda-nombre">Spotify Premium Individual</div>
+          <div class="tienda-plataforma">
+            <span class="plataforma-tag">Spotify Account · GLOBAL</span>
+          </div>
+          <div class="tienda-precios">
+            <span class="precio-actual">37.04 EUR</span>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- Card 5 -->
+      <div class="tienda-card">
+        <div class="tienda-badge">OFERTAS DE 7 VENDEDORES</div>
+        <div class="tienda-img-wrap">
+          <img src="https://www.softzone.es/app/uploads-softzone.es/2025/06/gemini-1.jpg?x=500&y=295&quality=80" alt="Google Gemini" />
+        </div>
+        <div class="tienda-info">
+          <div class="tienda-nombre">Google AI Gemini Advanced 12 meses</div>
+          <div class="tienda-plataforma">
+            <span class="plataforma-tag">Gemini · Cuenta · GLOBAL</span>
+          </div>
+          <div class="tienda-precios">
+            <span class="precio-actual">6.92 EUR</span>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- Card 6 -->
+      <div class="tienda-card">
+        <div class="tienda-badge">OFERTAS DE 3 VENDEDORES</div>
+        <div class="tienda-img-wrap">
+          <img src="https://c.ndtvimg.com/2025-10/fdr9t7oc_chatgpt_625x300_15_October_25.jpg?im=FeatureCrop,algorithm=dnn,width=400,height=225%22 alt="ChatGPT" />
+        </div>
+        <div class="tienda-info">
+          <div class="tienda-nombre">ChatGPT Go 1 User 1 año</div>
+          <div class="tienda-plataforma">
+            <span class="plataforma-tag">ChatGPT · Cuenta · GLOBAL</span>
+          </div>
+          <div class="tienda-precios">
+            <span class="precio-actual">8.09 EUR</span>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- Card 7 -->
+      <div class="tienda-card">
+        <div class="tienda-badge">OFERTAS DE 7 VENDEDORES</div>
+        <div class="tienda-img-wrap">
+          <img src="https://images.g2a.com/470x276/1x1x0/marvels-spider-man-2-digital-deluxe-edition-pc-steam-key-global-i10000339903015/ab8855ecb31e4cc3abc24a9f%22 alt="Spider-Man 2" />
+        </div>
+        <div class="tienda-info">
+          <div class="tienda-nombre">Marvel's Spider-Man 2 Digital Deluxe Edition</div>
+          <div class="tienda-plataforma">
+            <span class="plataforma-tag">Steam · Clave · GLOBAL</span>
+          </div>
+          <div class="tienda-precios">
+            <span class="precio-actual">38.50 EUR</span>
+            <span class="precio-original">79.99 EUR</span>
+            <span class="descuento">-52%</span>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- Card 8 -->
+      <div class="tienda-card">
+        <div class="tienda-badge">OFERTAS DE 5 VENDEDORES</div>
+        <div class="tienda-img-wrap">
+          <img src="https://cdn1.epicgames.com/spt-assets/3e0c82e7863e40818a56f934edc55712/death-stranding-2-on-the-beach-127k4.jpg%22 alt="Death Stranding 2" />
+        </div>
+        <div class="tienda-info">
+          <div class="tienda-nombre">Death Stranding 2: On The Beach Digital</div>
+          <div class="tienda-plataforma">
+            <span class="plataforma-tag">Steam · Cuenta · GLOBAL</span>
+          </div>
+          <div class="tienda-precios">
+            <span class="precio-actual">44.99 EUR</span>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- Card 9 -->
+      <div class="tienda-card">
+        <div class="tienda-badge">OFERTAS DE 3 VENDEDORES</div>
+        <div class="tienda-img-wrap">
+          <img src="https://sm.ign.com/t/ign_latam/review/m/mario-kart/mario-kart-8-deluxe-review_vg8p.1280.jpg" alt="Mario Kart World" />
+        </div>
+        <div class="tienda-info">
+          <div class="tienda-nombre">Mario Kart World Nintendo Switch 2</div>
+          <div class="tienda-plataforma">
+            <span class="plataforma-tag">Nintendo eShop · Clave · HONG KONG</span>
+          </div>
+          <div class="tienda-precios">
+            <span class="precio-actual">59.99 EUR</span>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- Card 10 -->
+      <div class="tienda-card">
+        <div class="tienda-badge">OFERTAS DE 5 VENDEDORES</div>
+        <div class="tienda-img-wrap">
+          <img src="https://gaming-cdn.com/images/products/22143/orig/crimson-desert-deluxe-edition-pc-steam-cover.jpg?v=1773920884%22 alt="Crimson Desert" />
+        </div>
+        <div class="tienda-info">
+          <div class="tienda-nombre">Crimson Desert Deluxe Edition PC</div>
+          <div class="tienda-plataforma">
+            <span class="plataforma-tag">Steam · Clave · AMÉRICA LATINA</span>
+          </div>
+          <div class="tienda-precios">
+            <span class="precio-actual">29.99 EUR</span>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- Card 11 -->
+      <div class="tienda-card">
+        <div class="tienda-badge">OFERTAS DE 44 VENDEDORES</div>
+        <div class="tienda-img-wrap">
+          <img src="https://gaming-cdn.com/images/products/14986/616x353/minecraft-java-and-bedrock-edition-deluxe-collection-pc-microsoft-store-cover.jpg?v=1775124387%22 alt="Minecraft" />
+        </div>
+        <div class="tienda-info">
+          <div class="tienda-nombre">Minecraft: deluxe collection PC</div>
+          <div class="tienda-plataforma">
+            <span class="plataforma-tag">Microsoft Store · Clave · GLOBAL</span>
+          </div>
+          <div class="tienda-precios">
+            <span class="precio-actual">19.99 EUR</span>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- Card 12 -->
+      <div class="tienda-card">
+        <div class="tienda-badge">OFERTAS DE 22 VENDEDORES</div>
+        <div class="tienda-img-wrap">
+          <img src="https://gaming-cdn.com/images/products/4378/orig/risk-of-rain-2-pc-game-steam-cover.jpg?v=1683706883%22 alt="Risk of Rain 2" />
+        </div>
+        <div class="tienda-info">
+          <div class="tienda-nombre">Risk of Rain 2 PC</div>
+          <div class="tienda-plataforma">
+            <span class="plataforma-tag">Steam · Clave · GLOBAL</span>
+          </div>
+          <div class="tienda-precios">
+            <span class="precio-actual">9.99 EUR</span>
+            <span class="precio-original">24.99 EUR</span>
+            <span class="descuento">-60%</span>
+          </div>
+        </div>
+      </div>
+ 
+    </div><!-- fin tienda-grid -->
+  </section>
+ 
 </main>
-
+ 
 <!-- ===== FOOTER ===== -->
 <footer>
   <span class="footer-copy">copyright: innergames</span>
@@ -202,7 +415,6 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
         stroke="currentColor" stroke-width="2" width="20" height="20">
         <path d="M21 2H3v16h5v4l4-4h5l4-4V2zM11 11V7m5 4V7"/>
-        <img src="" alt="">
       </svg>
     </a>
     <a href="#" title="Facebook">
@@ -219,7 +431,7 @@
     </a>
   </div>
 </footer>
-
-<script src="./index.js"></script>
+ 
+<script src="index.js"></script>
 </body>
 </html>

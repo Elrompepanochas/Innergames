@@ -13,10 +13,19 @@ header {
     align-items: center;
 }
 
+nav {
+    width: 100vw;
+    height: 15vh;
+    background-color: #990000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
 /* segundo header*/
 .segundo-header {width: 100vw;
-    height: 7vh;
-    background-color: #5F021F;
+    height: 3vh;
+    background-color: #300000;
     display: flex;}
 
 header img {
@@ -47,12 +56,157 @@ header h1 {
 .card{
     width: 20vw;
     height: 40vh;
-    background-color: blueviolet;
+    background-color: rgb(252, 252, 252);
     display: flex;
     flex-direction: column;
     align-items: center;
     
 }
 
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Imagen */
+.card img {
+    width: 100%;
+    height: 185px;
+    object-fit: cover;
+}
+
+/* Texto */
+.card p {
+    font-weight: bold;
+    margin: 10px;
+    font-family: 'Anek Gurmukhi', sans-serif;
+
+    text-align: left;
+    align-self: flex-start;
+}
+
+/* Botón */
+.card button {
+    margin-bottom: 15px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #35DD13;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+
+    margin-top: auto; /* baja hasta al fondo */
+    align-self: flex-end; /* lo manda a la derecha */
+}
+
+.card button:hover {
+    background-color: #0074cc;
+}
+
+.price {
+    margin-top: auto; /* baja hasta al fondo */
+    align-self:flex-start;
+    font-weight: bold;
+}
+
 body {
-  background-image: url()}
+  background-image: url('Captura\ de\ pantalla\ 2026-04-07\ 093938.png'); /* Ruta de tu imagen */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.tercer-header {width: 100vw;
+    height: 7vh;
+    background-color:#00518B;
+    display: flex;}
+
+/*titulo*/
+.titulo span {
+  background: #ff3b00;
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  position: relative;
+  display: inline-block;
+  font-size: 28px;
+  font-weight: bold;
+  
+}
+
+/* Subtítulo */
+.subtitle {
+  margin-top: 15px;
+  color: #ccc;
+  font-size: 14px;
+}
+
+/*barra de busqueda*/
+tituloCarrito{
+    padding: 30pt 0 0 0;
+    text-align: center;
+    font-family: "Leckerli One", cursive;
+    font-size: 60px;
+}
+#imgcarrito{
+    width: 10vh;
+    height: 10vb;
+}
+#carritoh{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30pt;
+    width: 50%;
+   padding: 10px;
+   background-color: #990000;
+   border: none;
+   font-size:  1rem;
+   cursor:pointer;
+   transition: background-color 0.25 ease;
+    font-family: "Iceberg", sans-serif;
+}
+#carritoh:hover{
+   background-color: rgb(163, 57, 8);
+}
+#carritoh img{
+   
+   width: 70px;
+    height: 70px;
+}
+nav input{
+    font-size: 3vh;
+}
+#busqueda{
+    display: flex;
+    margin: 10px;
+}
+#busqueda img{
+margin: 1vb;
+    width: 40px;
+    height: 38px;
+}
+ 
+ 
+#busqueda input {
+  background: #1c1c1c;
+  border: 1px solid rgba(153,0,0,0.35);
+  color: #f0f0f0;
+  font-family: 'Inter', sans-serif;
+  font-size: 2vh;
+  padding: 8px 36px 8px 14px;
+  border-radius: 8px;
+  width: 50vb;
+  transition: border-color .25s, width .35s;
+  outline: none;
+}
+ 
+#busqueda input::placeholder {
+  color: #888;
+}
+ 
+#busqueda input:focus {
+  border-color: #990000;
+  width: 55vb;
+}

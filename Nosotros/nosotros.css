@@ -25,17 +25,23 @@
 }
 
 nav {
-    width: 100vw;
-    height: 15vh;
-    background-color: #990000;
-    display: flex;
-    justify-content: space-around;
-    align-items: center; 
+  background: var(--header-fondo);
+  border-bottom: 2px solid var(--rojo-oscuro);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 1.5rem;
+  gap: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 20px rgba(200, 0, 0, 0.25);
 }
 
-nav img {             
-    width: 130px;
-    height: 110px;
+nav img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
 }
 
 .titulo h1 {
@@ -109,7 +115,7 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
- background-image:url(../Fondo\ rojo\ bien.jpg) ;
+ background-image:url(../Imagenes-Innergames/Fondo\ rojo\ bien.jpg) ;
 }
 
 
@@ -394,6 +400,38 @@ footer {
   transition: color var(--transicion), transform var(--transicion);
   display: flex;
 }
+
+.social-icons a:hover { transform: scale(1.2); }
+.social-icons a:nth-child(1):hover { color: #e1306c; }
+.social-icons a:nth-child(2):hover { color: #9146ff; }
+.social-icons a:nth-child(3):hover { color: #1877f2; }
+.social-icons a:nth-child(4):hover { color: #7289da; }
+ 
+/* ===========================
+   RESPONSIVE
+   =========================== */
+@media (max-width: 1200px) {
+  .tienda-grid { grid-template-columns: repeat(4, 1fr); }
+}
+ 
+@media (max-width: 900px) {
+  .game-card { flex: 0 0 calc(50% - 0.6rem); }
+  .tienda-grid { grid-template-columns: repeat(3, 1fr); }
+  nav { gap: 1.5rem; }
+  .search-wrap { max-width: 300px; }
+}
+ 
+@media (max-width: 600px) {
+  .game-card { flex: 0 0 calc(100% - 0.6rem); }
+  .tienda-grid { grid-template-columns: repeat(2, 1fr); }
+  .topbar { flex-wrap: wrap; gap: 0.6rem; }
+  .search-wrap { max-width: 100%; order: 3; flex-basis: 100%; }
+  .section-title { font-size: 1.2rem; }
+  nav { gap: 1rem; flex-wrap: wrap; }
+  .nav-item { font-size: 0.85rem; }
+  .nav-item svg { width: 22px; height: 22px; }
+}
+
 .topbar {
   background: var(--header-fondo);
   border-bottom: 2px solid var(--rojo-oscuro);
@@ -407,7 +445,13 @@ footer {
   z-index: 100;
   box-shadow: 0 2px 20px rgba(200, 0, 0, 0.25);
 }
-
+ 
+.logo img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+ 
 .topbar-actions {
   display: flex;
   gap: 1.2rem;
@@ -523,3 +567,23 @@ nav {
 nav img {
     padding-right: 1%;
 }
+
+/*============BOTON DE ACCOUNT=========*/
+.btn-account,
+.btn-account button,
+.btn-cart {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--fuente-cuerpo);
+  font-size: 0.85rem;
+  color: var(--texto);
+  cursor: pointer;
+  background: none;
+  border: none;
+  transition: color var(--transicion);
+}
+
+.btn-account:hover,
+.btn-account button:hover,
+.btn-cart:hover { color: var(--acento); }
