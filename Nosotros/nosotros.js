@@ -164,7 +164,7 @@ const decryptData = async (encryptedPackage, masterPassword) => {
             // Prevenir el envío normal del formulario
             event.preventDefault();
             
-            console.log('🚀 Formulario enviado - Procesando datos...');
+            console.log('Formulario enviado - Procesando datos...');
             
             // Obtener los valores del formulario
             const nombre = document.getElementById('Nombre').value;
@@ -173,7 +173,7 @@ const decryptData = async (encryptedPackage, masterPassword) => {
             const formResult = document.getElementById('formResult');
             
             // Validar que los campos no estén vacíos
-            if (!nombre || !contrasena) {
+            if (!nombre || !contrasena || !mensaje) {
                 formResult.innerHTML = `
                     <span class="error">❌ Por favor, completa todos los campos del formulario</span>
                 `;
@@ -188,16 +188,21 @@ const decryptData = async (encryptedPackage, masterPassword) => {
                 
                 // PASO 1: Generar hash de la contraseña (no se guarda el texto plano)
                 console.log('📝 Generando hash de la contraseña...');
-                const hashedPassword = await hashPassword(password);
+                const hashedPassword = await hashPassword(contrasena);
                 
                 // PASO 2: Encriptar el nombre de usuario (simulando datos sensibles)
                 console.log('🔒 Encriptando nombre de usuario...');
                 const masterKey = "claveMaestraDelSistema"; // En un caso real, esto sería única por usuario
-                const encryptedUsername = await encryptData(username, masterKey);
+                const encryptedUsername = await encryptData(nombre, masterKey);
+
+                console.log('🔒 Encriptando nombre de Mensaje...');
+                const masterKey2 = "claveMaestraDelSistema2"; // En un caso real, esto sería única por usuario
+                const encryptedMensaje = await encryptData(mensaje, masterKey2);
                 
                 // PASO 3: Simular envío al servidor (aquí normalmente harías un fetch)
                 const datosProtegidos = {
                     username_encriptado: encryptedUsername,
+                    mensaje_encriptado: encryptedMensaje,
                     password_hash: hashedPassword,
                     timestamp: new Date().toISOString(),
                     metodo: "POST",
@@ -208,37 +213,36 @@ const decryptData = async (encryptedPackage, masterPassword) => {
                 
                 // Mostrar resultados en el HTML
                 formResult.innerHTML = `
-                    <strong>✅ Datos protegidos exitosamente</strong><br><br>
+                    <strong>¡Datos protegidos exitosamente!</strong><br><br>
                     
-                    <strong>🔐 Hash de contraseña (lo que se guarda):</strong><br>
+                    <strong> Este es el siguente Hash de su contraseña:</strong><br>
                     <div style="font-size: 11px; background: white; padding: 8px; border-radius: 4px; margin-top: 5px; word-break: break-all;">
                         ${hashedPassword}
                     </div>
                     
                     <br>
                     
-                    <strong>🔒 Nombre de usuario encriptado:</strong><br>
+                    <strong> Nombre de usuario encriptado:</strong><br>
                     <div style="font-size: 11px; background: white; padding: 8px; border-radius: 4px; margin-top: 5px; word-break: break-all;">
                         ${encryptedUsername}
                     </div>
                     
                     <br>
+
+                    <strong> El mensaje encriptado:</strong><br>
+                    <div style="font-size: 11px; background: white; padding: 8px; border-radius: 4px; margin-top: 5px; word-break: break-all;">
+                        ${encryptedMensaje}
+                    </div>
                     
-                    <strong>📤 Simulación de envío al servidor:</strong><br>
+                    <br>
+                    
+                    <strong> Mensaje de envío al servidor:</strong><br>
                     <div style="background: #f0f0f0; padding: 10px; border-radius: 4px; font-size: 12px; margin-top: 5px;">
                         <code style="word-break: break-all;">
                             ${JSON.stringify(datosProtegidos, null, 2)}
                         </code>
                     </div>
                     
-                    <br>
-                    
-                    <span class="success">🎉 ¡Los datos están protegidos! Ni siquiera en la consola se ve la contraseña original.</span>
-                    
-                    <br><br>
-                    
-                    <small>💡 <strong>Nota:</strong> En un entorno real, estos datos se enviarían mediante fetch() a tu backend, 
-                    nunca la contraseña en texto plano.</small>
                 `;
                 
                 // Limpiar los campos del formulario (opcional)
