@@ -567,3 +567,6 @@ header img {
   height: 100px;
   object-fit: contain;
 }
+.btn-account, .btn-cart{
+  font-family: 'Inter', sans-serif;
+}

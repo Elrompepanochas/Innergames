@@ -237,6 +237,7 @@ main::before {
   flex: 1;
   overflow: hidden;
   border-radius: 6px;
+  padding: 20px 6px;
 }
  
 .carousel-track {
